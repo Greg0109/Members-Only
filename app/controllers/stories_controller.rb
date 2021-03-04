@@ -3,7 +3,8 @@ class StoriesController < ApplicationController
 
   # GET /stories or /stories.json
   def index
-    @stories = Story.all
+    @stories = Story.all.order("created_at DESC")
+    @story = Story.new
   end
 
   # GET /stories/1 or /stories/1.json
@@ -12,7 +13,7 @@ class StoriesController < ApplicationController
 
   # GET /stories/new
   def new
-    @story = Story.new
+    @story = current_user.stories.build
   end
 
   # GET /stories/1/edit
@@ -21,7 +22,7 @@ class StoriesController < ApplicationController
 
   # POST /stories or /stories.json
   def create
-    @story = Story.new(story_params)
+    @story = current_user.stories.build(story_params)
 
     respond_to do |format|
       if @story.save
