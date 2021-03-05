@@ -44,6 +44,10 @@ If you intend to download the project, you will need to have Ruby and Rails alre
 - Twitter: [@twitter](https://twitter.com/Alan55572391)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/alan-solis)
 
+👤 **Gregorio Rábago Sainz**
+
+- GitHub: [@Greg0109](https://github.com/greg0109)
+- Twitter: [@Greg_0109](https://twitter.com/greg_0109)
 
 ## 🤝 Contributing
 
