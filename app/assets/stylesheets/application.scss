@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap";
+
+
+.editform {
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: gray 1px solid;
+  border-radius: 5%;
+  margin-left: 300px;
+  background-color:rgba(235, 248, 248, 0.871);
+}
+
+h1 {
+  margin-left: 100px;
+}

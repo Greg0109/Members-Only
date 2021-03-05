@@ -1,6 +1,7 @@
 class StoriesController < ApplicationController
   before_action :set_story, only: %i[ show edit update destroy ]
-
+  before_action :authenticate_user!, except: [:index, :show]
+  
   # GET /stories or /stories.json
   def index
     @stories = Story.all.order("created_at DESC")
