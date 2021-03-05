@@ -7,7 +7,8 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%# <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %> %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -24,6 +25,29 @@
     <% if alert %>
       <p class="alert alert-danger"><%= alert %></p>
     <% end %>
-    <%= yield %>
+
+    <nav class="navbar bg-light">
+        <div class="navbar left">
+          <h1>Stories</h1>
+          </div>
+          <div class="navbar right">
+              <ul class="nav justify-content-end">
+              <li class="nav-item">
+                <p class="navbar-text">
+            <% if user_signed_in? %>
+              Logged in as <strong><%= current_user.username %></strong>.
+              <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+              <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %>
+            <% else %>
+              <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+              <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+            <% end %>
+            </p>
+            </li>
+      </div>
+    </nav>
+    <div class="d-flex row justify-content-center text-center">
+      <%= yield %>
+    </div>
   </body>
 </html>
