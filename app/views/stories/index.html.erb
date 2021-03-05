@@ -22,15 +22,15 @@
                 <p class="card-text text-left">
                   <%= story.body.truncate(100) %>
                 </p>
-                <% if user_signed_in? %>
-                  <% if current_user.username == story.user.username %>
-                    <div class="buttons text-left">
-                      <%= link_to 'Show', story, class: 'btn bg-secondary text-white p-1' %>
+                <div class="buttons text-left">
+                  <%= link_to 'Show', story, class: 'btn bg-secondary text-white p-1' %>
+                  <% if user_signed_in? %>
+                    <% if current_user.username == story.user.username %>
                       <%= link_to 'Edit', edit_story_path(story), class: 'btn bg-secondary text-white p-1' %>
                       <%= link_to 'Delete', story, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger p-1 text-white' %>
-                    </div>
+                    <% end %>
                   <% end %>
-                <% end %>
+                </div>
               </div>
             </div>
           </div>
