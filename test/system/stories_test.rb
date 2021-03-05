@@ -1,3 +1,5 @@
+# rubocop:disable Layout/EndOfLine
+
 require 'application_system_test_case'
 
 class StoriesTest < ApplicationSystemTestCase
@@ -43,3 +45,5 @@ class StoriesTest < ApplicationSystemTestCase
     assert_text 'Story was successfully destroyed'
   end
 end
+
+# rubocop:enable Layout/EndOfLine

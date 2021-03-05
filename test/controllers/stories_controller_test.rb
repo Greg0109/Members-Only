@@ -1,3 +1,5 @@
+# rubocop:disable Layout/EndOfLine
+
 require 'test_helper'
 
 class StoriesControllerTest < ActionDispatch::IntegrationTest
@@ -46,3 +48,5 @@ class StoriesControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to stories_url
   end
 end
+
+# rubocop:enable Layout/EndOfLine

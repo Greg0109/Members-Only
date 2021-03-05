@@ -1,3 +1,5 @@
+# rubocop:disable Layout/EndOfLine
+
 require 'test_helper'
 
 class StoryTest < ActiveSupport::TestCase
@@ -5,3 +7,5 @@ class StoryTest < ActiveSupport::TestCase
   #   assert true
   # end
 end
+
+# rubocop:enable Layout/EndOfLine

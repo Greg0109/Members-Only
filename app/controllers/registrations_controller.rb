@@ -1,3 +1,5 @@
+# rubocop:disable Layout/EndOfLine
+
 class RegistrationsController < Devise::RegistrationsController
   private
 
@@ -9,3 +11,5 @@ class RegistrationsController < Devise::RegistrationsController
     params.require(:user).permit(:name, :username, :email, :password, :password_confirmation, :current_password)
   end
 end
+
+# rubocop:enable Layout/EndOfLine

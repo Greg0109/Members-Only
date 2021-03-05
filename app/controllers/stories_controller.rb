@@ -1,3 +1,5 @@
+# rubocop:disable Layout/EndOfLine
+
 class StoriesController < ApplicationController
   before_action :set_story, only: %i[show edit update destroy]
   before_action :authenticate_user!, except: %i[index show]
@@ -68,3 +70,5 @@ class StoriesController < ApplicationController
     params.require(:story).permit(:title, :body)
   end
 end
+
+# rubocop:enable Layout/EndOfLine
