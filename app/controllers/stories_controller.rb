@@ -1,8 +1,7 @@
 # rubocop:disable Layout/EndOfLine
 
 class StoriesController < ApplicationController
-  before_action :set_story, only: %i[show edit update destroy]
-  before_action :authenticate_user!, except: %i[index show]
+  before_action :authenticate_user!, only: %i[new create]
 
   # GET /stories or /stories.json
   def index
@@ -15,7 +14,7 @@ class StoriesController < ApplicationController
 
   # GET /stories/new
   def new
-    @story = current_user.stories.build
+    @story = Story.new
   end
 
   # GET /stories/1/edit

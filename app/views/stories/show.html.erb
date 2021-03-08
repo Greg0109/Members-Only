@@ -1,9 +1,7 @@
 <div class="row">
   <div class="col-12">
     <h2 class="col-12"><%= @story.title %></h2>
-    <% if user_signed_in? %>
-      <p class="col-12 text-muted"><%= @story.user.username %></p>
-    <% end %>
+    <p class="col-12 text-muted"><%= display_name(@story.user) %></p>
   </div>
 
   <p class="col-12">
