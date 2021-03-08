@@ -1,3 +1,4 @@
+# rubocop:disable Layout/EndOfLine
 # rubocop:disable Style/GuardClause
 
 module StoriesHelper
@@ -22,3 +23,4 @@ module StoriesHelper
 end
 
 # rubocop:enable Style/GuardClause
+# rubocop:enable Layout/EndOfLine
