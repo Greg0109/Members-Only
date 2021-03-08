@@ -32,9 +32,10 @@ If you intend to download the project, you will need to have Ruby and Rails alre
 1. Run `git clone git@github.com:Greg0109/Members-Only.git` => to clone the source code
 2. Run `cd members-only` => to change directory
 3. Run `bundle install` => to install all of the gems
-4. Run `rails db:migrate` to migrate all tables
-5. Run `rails s` => to start the server
-6. Open `localhost:3000` on a browser of your choice
+4. Run `yarn install` => to make sure you have application.js
+5. Run `rails db:migrate` to migrate all tables
+6. Run `rails s` => to start the server
+7. Open `localhost:3000` on a browser of your choice
 
 ## Authors
 
