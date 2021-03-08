@@ -1,0 +1,32 @@
+<div class="column">
+  <div class="title text-center">
+    <%= display_new_story_button %>
+  </div>
+  <div class="row" style="max-width: 1000px">
+    <table class="pt-5">
+      <tbody>
+        <% @stories.each do |story| %>
+          <div class="mx-3 my-3 col-5">
+            <div class="card" style="width: 400px; height: 200px">
+              <div class="card-body">
+                <h3 class="card-title text-left">
+                  <%= story.title %>
+                </h3>
+                <p class="card-subtitle mb-2 text-muted text-left">
+                  <%= display_name(story.user) %>
+                </p>
+                <p class="card-text text-left">
+                  <%= story.body.truncate(100) %>
+                </p>
+                <div class="buttons text-left">
+                  <%= link_to 'Show', story, class: 'btn bg-secondary text-white p-1' %>
+                  <%= display_button(story) %>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

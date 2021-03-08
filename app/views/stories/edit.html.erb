@@ -1,0 +1,13 @@
+<div class="row">
+    <h2 class="col-12">
+        Edit Story
+    </h2>
+    <div class="col-12">
+        <%= render 'form', story: @story %>
+    </div>
+
+    <div class="col-12">
+        <%= link_to 'Show', @story %> |
+        <%= link_to 'Back', stories_path %>
+    </div>
+</div>
