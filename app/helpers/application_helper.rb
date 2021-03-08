@@ -1,3 +1,5 @@
+# rubocop:disable Layout/EndOfLine
+
 module ApplicationHelper
   def loged_in
     if user_signed_in?
@@ -23,3 +25,5 @@ module ApplicationHelper
     end
   end
 end
+
+# rubocop:enable Layout/EndOfLine

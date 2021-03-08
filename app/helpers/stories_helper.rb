@@ -1,4 +1,3 @@
-# rubocop:disable Layout/EndOfLine
 # rubocop:disable Style/GuardClause
 
 module StoriesHelper
@@ -10,8 +9,8 @@ module StoriesHelper
                     end
   end
 
-  def display_button(user, story)
-    if user_signed_in? && (current_user.username = user.username)
+  def display_button(story)
+    if user_signed_in? && (current_user.id == story.user.id)
       link_to 'Delete', story, method: :delete, data: { confirm: 'Are you sure?' },
                                class: 'btn btn-danger p-1 text-white'
     end
@@ -23,4 +22,3 @@ module StoriesHelper
 end
 
 # rubocop:enable Style/GuardClause
-# rubocop:enable Layout/EndOfLine
